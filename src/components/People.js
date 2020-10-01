@@ -2,7 +2,7 @@ import React from 'react';
 const People = () => {
     return (
        <div>
-           <h2>People</h2>
+           <h3>People</h3>
        </div>
     );
 };

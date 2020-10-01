@@ -2,7 +2,7 @@ import React from 'react';
 const Planets = () => {
   return (
     <div>
-      <h2>Planets</h2>
+      <h3>Planets</h3>
     </div>
   );
 };

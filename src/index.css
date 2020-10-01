@@ -11,8 +11,7 @@ code {
 }
 
 .list-option {
-  margin: 2% 0;
-  margin-left: auto !important;
+  margin: 1% 0 1% auto;
 }
 
 .list-option button {
