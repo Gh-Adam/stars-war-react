@@ -1,13 +1,46 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.list-option {
+  margin: 2% 0;
+  margin-left: auto !important;
+}
+
+.list-option button {
+  outline: none;
+  height: 48px;
+  border: 3px solid #a77ebc;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #3d318b;
+  color: #fdfdfd;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.list-option button:hover {
+  color: #3d318b;
+  background: #fdfdfd;
+}
+.list-option button:active {
+  letter-spacing: 2px;
 }
