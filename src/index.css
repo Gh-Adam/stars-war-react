@@ -1,13 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .list-option {
@@ -27,11 +29,11 @@ code {
   text-shadow: 0;
   font-weight: bold;
   cursor: pointer;
-  transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   margin: 5px;
   font-size: 1rem;
 }
@@ -42,4 +44,72 @@ code {
 }
 .list-option button:active {
   letter-spacing: 2px;
+}
+
+/* Cards List Style */
+.data-list {
+  width: 100%;
+  /* margin: 0 10% */
+}
+
+.data-list .card {
+  width: 60% !important;
+  border-radius: 5px;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  box-shadow: 0 2px 8px 2px;
+  margin: 30px 0;
+  width: min-content;
+  transition: 0.7s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: 0.7s ease-in-out;
+  -moz-transition: 0.7s ease-in-out;
+  -ms-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  font-size: 16px;
+}
+
+.data-list .card:hover {
+  box-shadow: 0px 8px 10px 5px;
+  transform: rotateX(10deg) scale(1.1);
+  -webkit-transform: rotateX(10deg) scale(1.1);
+  -moz-transform: rotateX(10deg) scale(1.1);
+  -ms-transform: rotateX(10deg) scale(1.1);
+  -o-transform: rotateX(10deg) scale(1.1);
+}
+
+/* Before is the shine content */
+.data-list .card::before {
+  transition: inherit;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  bottom: 0;
+  left: -50%;
+  content: '';
+  transform: rotate(30deg) translate(0, -80%);
+  background: linear-gradient(
+    to bottom,
+    rgba(​ 167, ​ 126, ​ 188, 0.2) 0%,
+    rgba(167, ​ 126, ​ 188, 0.2) 90%,
+    rgba(167, ​ 126, ​ 188, 0.4) 95%,
+    rgba(167, ​ 126, ​ 1885, 0) 100%
+  );
+}
+
+.data-list .card:hover::before {
+  transform: rotate(30deg) translate(0, -60%);
+  -webkit-transform: rotate(30deg) translate(0, -60%);
+  -moz-transform: rotate(30deg) translate(0, -60%);
+  -ms-transform: rotate(30deg) translate(0, -60%);
+  -o-transform: rotate(30deg) translate(0, -60%);
+}
+
+.data-list .card h4 {
+  color: #a77ebc;
+}
+
+.data-list .card p {
+  margin: 0;
+  color: #999;
 }
