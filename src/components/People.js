@@ -1,15 +1,29 @@
-import React from 'react';
-import { useQuery } from 'react-query';
+import React, { useState } from 'react';
+import { usePaginatedQuery } from 'react-query';
 import Person from './Person';
-
-const getPeopleList = async () => {
-  const res = await fetch(`http://swapi.dev/api/people/`);
+import classNames from 'classnames';
+const getPeopleList = async (key, page) => {
+  const res = await fetch(`http://swapi.dev/api/people/?page=${page}`);
   return res.json();
 };
 
 const People = () => {
-  const { data, status } = useQuery('getPeople', getPeopleList);
-  console.log('people', data);
+  const [page, setPage] = useState(1);
+  // Use Paginated Query
+  const { resolvedData: data, latestData, status} = usePaginatedQuery(['getPeople', page], getPeopleList)
+
+  
+
+  const generateButtonList = (pages) => { 
+    const arr = Array.from(Array(pages).keys()).map(i => i+1);
+    const x = arr.map(i => (<button key={i} className={classNames(['page-num', { active : page === i}])} onClick={() => setPage(i)} > {i} </button> ))
+    return x;
+  }
+
+  const getPagesLength = (data) => {
+    const pages = (data && data.count && data.results.length > 0 ) ? Math.ceil(data.count/data.results.length) : 0;
+    return pages;
+  } 
   return (
     <div>
       <h3>People</h3>
@@ -27,11 +41,28 @@ const People = () => {
       )}
       {/* Show Data List */}
       {status === 'success' && data?.results?.length > 0 && (
-        <div className="data-list">
-          {data.results.map((person) => (
-            <Person key={person.name} person={person} />
-          ))}
-        </div>
+        <>
+          <div className="btn-actions">
+            <button
+            onClick={() => setPage(current => Math.max(current-1, 1))}
+            disabled={page === 1}
+            >Prev</button>
+
+            {   
+                generateButtonList(getPagesLength(data))
+            }
+
+            <button
+            onClick={() => setPage(current =>  (!latestData || !latestData.next) ? current : current + 1 )}
+            disabled={!latestData || !latestData.next}
+            >Next</button>
+          </div>
+          <div className="data-list">
+            {data.results.map((person) => (
+              <Person key={person.name} person={person} />
+            ))}
+          </div>
+        </>
       )}
     </div>
   );
