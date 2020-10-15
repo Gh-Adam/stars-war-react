@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stars-war-react/static/css/main.d99f4bb4.chunk.css",
-    "main.js": "/stars-war-react/static/js/main.a60aec0d.chunk.js",
-    "main.js.map": "/stars-war-react/static/js/main.a60aec0d.chunk.js.map",
+    "main.js": "/stars-war-react/static/js/main.57aec38b.chunk.js",
+    "main.js.map": "/stars-war-react/static/js/main.57aec38b.chunk.js.map",
     "runtime-main.js": "/stars-war-react/static/js/runtime-main.c44165a3.js",
     "runtime-main.js.map": "/stars-war-react/static/js/runtime-main.c44165a3.js.map",
     "static/js/2.01a99de5.chunk.js": "/stars-war-react/static/js/2.01a99de5.chunk.js",
     "static/js/2.01a99de5.chunk.js.map": "/stars-war-react/static/js/2.01a99de5.chunk.js.map",
     "index.html": "/stars-war-react/index.html",
-    "precache-manifest.090137d42a619f313ef3f1ecc6dc34ea.js": "/stars-war-react/precache-manifest.090137d42a619f313ef3f1ecc6dc34ea.js",
+    "precache-manifest.006883d1a1cf1d7a3bb97294993532da.js": "/stars-war-react/precache-manifest.006883d1a1cf1d7a3bb97294993532da.js",
     "service-worker.js": "/stars-war-react/service-worker.js",
     "static/css/main.d99f4bb4.chunk.css.map": "/stars-war-react/static/css/main.d99f4bb4.chunk.css.map",
     "static/js/2.01a99de5.chunk.js.LICENSE.txt": "/stars-war-react/static/js/2.01a99de5.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c44165a3.js",
     "static/js/2.01a99de5.chunk.js",
     "static/css/main.d99f4bb4.chunk.css",
-    "static/js/main.a60aec0d.chunk.js"
+    "static/js/main.57aec38b.chunk.js"
   ]
 }
